@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Adeon</title>
+</head>
+
+<body>
+    <svg display="none">
+    <symbol id="arrow" viewBox="0 0 12 12">
+        <g>
+            <path d="M1 11L11 1M11 1L2.62952 1.0778M11 1L10.9222 9.37048" />
+        </g>
+    </symbol>
+    <symbol id="logo" viewBox="0 0 230 32">
+        <g>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.8027 0.70874L37.6053 30.9332H32.5151L18.8027 8.89105L5.09022 30.9332H0L18.8027 0.70874Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M50.8351 1.06665L54.6354 5.33332H70.3802C71.8426 5.33332 74.6243 5.58516 76.9738 7.01388C79.1542 8.33984 81.2387 10.8363 81.2387 16C81.2387 21.1637 79.1542 23.6601 76.9738 24.9861C74.6243 26.4148 71.8426 26.6666 70.3802 26.6666H54.6354L50.2922 30.9333H70.3802C72.1753 30.9333 75.9087 30.6518 79.2599 28.6139C82.7802 26.4732 85.582 22.5696 85.582 16C85.582 9.43035 82.7802 5.52679 79.2599 3.38608C75.9087 1.34814 72.1753 1.06665 70.3802 1.06665H50.8351Z" />
+            <path
+                d="M126.808 6.93345C128.627 6.93345 130.102 5.50076 130.102 3.73345C130.102 1.96614 128.627 0.533447 126.808 0.533447C125.494 0.533447 124.36 1.2809 123.831 2.36202H101.436L98.6123 5.10488H123.831C124.36 6.18599 125.494 6.93345 126.808 6.93345Z" />
+            <path
+                d="M126.808 31.4667C128.627 31.4667 130.102 30.034 130.102 28.2667C130.102 26.4993 128.627 25.0667 126.808 25.0667C125.494 25.0667 124.36 25.8141 123.831 26.8952H101.436L98.6123 29.6381H123.831C124.36 30.7192 125.494 31.4667 126.808 31.4667Z" />
+            <path
+                d="M163.764 19.2C165.563 19.2 167.021 17.7674 167.021 16C167.021 14.2327 165.563 12.8 163.764 12.8C162.464 12.8 161.342 13.5475 160.82 14.6286H107.377L104.585 17.3715H160.82C161.342 18.4526 162.464 19.2 163.764 19.2Z" />
+            <path
+                d="M175.708 16C175.708 22.5598 170.524 27.7333 164.306 27.7333C159.521 27.7333 155.348 24.6689 153.68 20.2667H149.13C150.959 26.9904 157.009 32 164.306 32C173.081 32 180.051 24.7569 180.051 16C180.051 7.24308 173.081 0 164.306 0C156.975 0 150.904 5.0559 149.104 11.8265H153.645C155.29 7.37433 159.488 4.26667 164.306 4.26667C170.524 4.26667 175.708 9.44023 175.708 16Z" />
+            <path
+                d="M202.854 9.37813L230 31.7781V1.06669L225.656 5.33336V22.6219L198.51 0.221924V32L202.854 27.7334V9.37813Z" />
+        </g>
+    </symbol>
+    <symbol id="arrow-border" viewBox="0 0 14 14">
+        <g>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.10998 1.33333C2.42331 1.33333 1.33331 2.48866 1.33331 4.27733V9.72266C1.33331 11.5113 2.42331 12.6667 4.10998 12.6667H9.88865C11.576 12.6667 12.6666 11.5113 12.6666 9.72266V4.27733C12.6666 2.48866 11.576 1.33333 9.88931 1.33333H4.10998ZM9.88865 13.6667H4.10998C1.85065 13.6667 0.333313 12.0813 0.333313 9.72266V4.27733C0.333313 1.91866 1.85065 0.333328 4.10998 0.333328H9.88931C12.1486 0.333328 13.6666 1.91866 13.6666 4.27733V9.72266C13.6666 12.0813 12.1486 13.6667 9.88865 13.6667Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.20896 9.082C6.08163 9.082 5.95296 9.03333 5.85563 8.93533L4.27296 7.35333C4.07763 7.158 4.07763 6.842 4.27296 6.64667C4.4683 6.45133 4.7843 6.45133 4.97963 6.64667L6.20896 7.87467L9.01963 5.06467C9.21496 4.86933 9.53096 4.86933 9.7263 5.06467C9.92163 5.26 9.92163 5.576 9.7263 5.77133L6.5623 8.93533C6.46496 9.03333 6.33696 9.082 6.20896 9.082Z" />
+        </g>
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+        <g>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.9215 0.0426841C9.49163 0.178407 7.89236 0.634441 6.65456 1.25945C5.374 1.90603 4.03356 2.92911 3.11504 3.96095C1.31335 5.98492 0.291008 8.32475 0.0440865 10.9896C-0.149803 13.0821 0.302871 15.4415 1.26336 17.3443C1.90983 18.6251 2.93273 19.9657 3.9644 20.8844C5.98802 22.6864 8.32745 23.7089 10.9919 23.9559C13.084 24.1498 15.4429 23.6971 17.3454 22.7364C18.626 22.0898 19.9664 21.0668 20.885 20.0349C22.6867 18.0109 23.709 15.6711 23.9559 13.0062C24.1498 10.9138 23.6971 8.55441 22.7366 6.65158C22.0902 5.3708 21.0673 4.03013 20.0356 3.11145C18.012 1.30944 15.6726 0.286928 13.0081 0.039964C12.4222 -0.0143437 11.5099 -0.0131713 10.9215 0.0426841ZM18.3338 8.48463C19.2527 9.48988 19.278 9.5229 19.1922 9.60366C19.1436 9.64938 17.2364 11.3813 14.9541 13.4522C12.6717 15.5232 10.7457 17.2718 10.674 17.338L10.5436 17.4583L7.91927 14.8339L5.29499 12.2095L6.29098 11.2126L7.28692 10.2156L8.95817 11.8867C9.87735 12.8058 10.6477 13.5464 10.67 13.5325C10.6923 13.5186 12.2087 12.1445 14.0397 10.4789C15.8708 8.81329 17.373 7.45016 17.3779 7.44969C17.3829 7.44922 17.8131 7.91496 18.3338 8.48463Z" />
+        </g>
+    </symbol>
+    <symbol id="close" viewBox="0 0 14 14">
+        <g>
+            <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" />
+        </g>
+    </symbol>
+</svg>
+    <div class="wrapper">
+        <div class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="" class="popup__close">
+                        <svg>
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </a>
+                    <div class="popup__icon">
+                        <img src="img/icons/email.svg" alt="email">
+                    </div>
+                    <div class="popup__title">лист успішно відправлено</div>
+                    <div class="popup__text">
+                        <p>
+                            Наш менеджер зв’яжеться з Вами найближчим часом
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header">
+    <div class="header__main main-header">
+        <div class="main-header__container container-small">
+            <div class="main-header__row">
+                <a href="" class="main-header__logo logo">
+                    <svg>
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <nav class="header__menu menu-header" data-da="mobile-header__body, 1, 1023.98">
+                    <ul class="menu-header__list">
+                        <li class="menu-header__item">
+                            <a href="" class="menu-header__link link-scroll" data-scroll="about">About us</a>
+                        </li>
+                        <li class="menu-header__item">
+                            <a href="" class="menu-header__link link-scroll" data-scroll="solutions">Solutions</a>
+                        </li>
+                        <li class="menu-header__item">
+                            <a href="" class="menu-header__link link-scroll" data-scroll="benefits">Key benefits</a>
+                        </li>
+                        <li class="menu-header__item">
+                            <a href="" class="menu-header__link link-scroll" data-scroll="resellers">Our resellers</a>
+                        </li>
+                        <li class="menu-header__item">
+                            <a href="" class="menu-header__link link-scroll" data-scroll="vendors">Our vendors</a>
+                        </li>
+                        <li class="menu-header__item">
+                            <a href="" class="menu-header__link link-scroll menu-header__link_contact"
+                                data-scroll="contact">Contact
+                                us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__language language" data-da="mobile-header__body, 0, 1023.98">
+                    <div class="language__dropdown dropdown">
+                        <button class='dropdown__button'>EN</button>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item selected" data-dropdown="EN">EN</li>
+                            <li class="dropdown__list-item" data-dropdown="UA">UA</li>
+                            <li class="dropdown__list-item" data-dropdown="SK">SK</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="header__burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header__mobile mobile-header">
+        <div class="mobile-header__container container-small">
+            <div class="mobile-header__body"></div>
+        </div>
+    </div>
+</header>
+        <main>
+            <section class="main">
+                <div class="main__inner">
+                    <div class="main__image-block">
+                        <div class="main__image ibg">
+                            <img src="img/main-img.jpg" alt="main-img">
+                        </div>
+                        <div class="main__image_mob ibg">
+                            <img src="img/main-img-mob.jpg" alt="main-img">
+                        </div>
+                    </div>
+                    <div class="main__container container">
+                        <div class="main__row">
+                            <div class="main__body body-main">
+                                <div class="body-main__container container-small">
+                                    <div class="body-main__row">
+                                        <div class="body-main__content">
+                                            <h3 class="body-main__title">
+                                                WE GUIDE <span>IT SECURITY SOLUTIONS</span> INTO THE TOP FLIGHT!
+                                            </h3>
+                                            <a href="" class="body-main__btn link-scroll" data-scroll="contact">Contact
+                                                Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <div class="about__container container-small">
+                    <div class="about__body">
+                        <h3 class="about__title">ABOUT US</h3>
+                        <div class="about__text text text-r">
+                            <p>
+                                Being value-added distributor, we provide IT security solutions with a full range of
+                                services – professional technical support, marketing and sales support, security
+                                services and other forms of support. Based in Slovakia, our company is a subject to EU
+                                rules, laws and standards, providing users and resellers industry-leading IT security
+                                software and services.
+                            </p>
+                            <p>
+                                Our portfolio consists of reliable solutions from carefully selected vendors designed to
+                                protect endpoints, servers, cloud environments, detect and respond to security
+                                incidents, provide comprehensive protection of corporate data. Moreover, based on 20+
+                                years of experience we provide a broad scale of IT security high-quality services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="solutions" id="solutions">
+                <div class="solutions__container container-small">
+                    <div class="solutions__top top-solutions">
+                        <h3 class="top-solutions__title">
+                            SOLUTIONS
+                        </h3>
+                        <div class="top-solutions__text text text-m">
+                            <p>
+                                A broad portfolio of cybersecurity solutions ensures multi-level protection, meeting the
+                                highest standards and demands
+                            </p>
+                        </div>
+                    </div>
+                    <div class="solutions__row">
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/01.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Endpoint and<br> Server Security
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/05.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Advanced Threat<br> Defense
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/03.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Extended Detection<br> and Response
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/04.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Identity and Data<br> Protection
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/02.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Cloud<br> Security
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/06.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Threat Intelligence
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/07.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Security Services
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/08.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Managed<br> Service<br> Provide
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="benefits" id="benefits">
+                <div class="benefits__container container-small">
+                    <div class="benefits__body">
+                        <h3 class="benefits__title">KEY BENEFITS FROM COOPERATION</h3>
+                        <div class="benefits__row">
+                            <div class="benefits__column">
+                                <div class="benefits__item item-benefits">
+                                    <div class="item-benefits__icon">
+                                        <img src="img/benefits/01.svg" alt="benefits">
+                                    </div>
+                                    <div class="item-benefits__title">
+                                        Hight competence and Individual approach
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="benefits__column">
+                                <div class="benefits__item item-benefits">
+                                    <div class="item-benefits__icon">
+                                        <img src="img/benefits/02.png" alt="benefits">
+                                    </div>
+                                    <div class="item-benefits__title">
+                                        Technical expertise<br> and support
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="benefits__column">
+                                <div class="benefits__item item-benefits">
+                                    <div class="item-benefits__icon">
+                                        <img src="img/benefits/03.svg" alt="benefits">
+                                    </div>
+                                    <div class="item-benefits__title">
+                                        Convenient logistic
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="benefits__column">
+                                <div class="benefits__item item-benefits">
+                                    <div class="item-benefits__icon">
+                                        <img src="img/benefits/04.svg" alt="benefits">
+                                    </div>
+                                    <div class="item-benefits__title">
+                                        Reliable solution providers
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="resellers" id="resellers">
+                <div class="resellers__container container">
+                    <div class="resellers__row">
+                        <div class="resellers__image-block">
+                            <div class="resellers__image ibg">
+                                <img src="img/resellers-img.jpg" alt="resellers-img">
+                            </div>
+                        </div>
+                        <div class="resellers__body body-resellers">
+                            <div class="body-resellers__container container-small">
+                                <div class="body-resellers__row">
+                                    <div class="body-resellers__content">
+                                        <h3 class="body-resellers__title">Active Resellers</h3>
+                                        <div class="body-resellers__text text text-r">
+                                            <p>
+                                                To distribute products in different countries and to be closer to the
+                                                end users we cooperate with more than 1000 companies – our resellers.
+                                                All the efforts of our team are aimed at maximum support for resellers,
+                                                their business and reputation.
+                                            </p>
+                                        </div>
+                                        <div class="body-resellers__text-blue text">
+                                            <p>
+                                                We provide an extensive range of high-quality services to help our
+                                                resellers to keep customers satisfied and loyal:
+                                            </p>
+                                        </div>
+                                        <ul class="body-resellers__list">
+                                            <li class="body-resellers__item item-body-resellers">
+                                                <span class="item-body-resellers__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                New opportunities for business development
+                                            </li>
+                                            <li class="body-resellers__item item-body-resellers">
+                                                <span class="item-body-resellers__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Fine-tuned partner program
+                                            </li>
+                                            <li class="body-resellers__item item-body-resellers">
+                                                <span class="item-body-resellers__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Wide portfolio of highly reliable and optimal solutions
+                                            </li>
+                                            <li class="body-resellers__item item-body-resellers">
+                                                <span class="item-body-resellers__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Multi-functional web portal to place and execute orders easily
+                                            </li>
+                                            <li class="body-resellers__item item-body-resellers">
+                                                <span class="item-body-resellers__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                24/7 information and technical support
+                                            </li>
+                                            <li class="body-resellers__item item-body-resellers">
+                                                <span class="item-body-resellers__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Trainings for sales and technical specialists
+                                            </li>
+                                            <li class="body-resellers__item item-body-resellers">
+                                                <span class="item-body-resellers__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Marketing activities and support
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="reseller">
+                <div class="reseller__container container-small">
+                    <div class="reseller__row">
+                        <div class="reseller__content">
+                            <h3 class="reseller__title">HOW TO BECOME A RESELLER?</h3>
+                            <div class="reseller__text_bold text">
+                                <p>
+                                    We're expanding and welcoming new partners! Interested in joining our global
+                                    network?
+                                </p>
+                            </div>
+                            <div class="reseller__text text text-r">
+                                <p>
+                                    Leave your company info to become a reseller and learn more. Our specialists will
+                                    contact you soon to discuss the details and find the best solutions for your
+                                    customers.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="" class="reseller__btn">Sign Up</a>
+                    </div>
+                </div>
+            </section>
+            <section class="vendors" id="vendors">
+                <div class="vendors__container container">
+                    <div class="vendors__row">
+                        <div class="vendors__image-block">
+                            <div class="vendors__image ibg">
+                                <img src="img/vendors-img.jpg" alt="vendors-img">
+                            </div>
+                        </div>
+                        <div class="vendors__body body-vendors">
+                            <div class="body-vendors__container container-small">
+                                <div class="body-vendors__row">
+                                    <div class="body-vendors__content">
+                                        <h3 class="body-vendors__title">Best Vendors Trust Us!</h3>
+                                        <div class="body-vendors__text text text-r">
+                                            <p>
+                                                Partner with us for top market positions. With 20 years of experience, a
+                                                strong reseller network, and loyal customers in 10 countries, we ensure
+                                                your brand's success.
+                                            </p>
+                                        </div>
+                                        <div class="body-vendors__text_bold text">
+                                            <p>
+                                                There will be provided a full range of services to distribute your
+                                                solutions effectively:
+                                            </p>
+                                        </div>
+                                        <ul class="body-vendors__list">
+                                            <li class="body-vendors__item item-body-vendors">
+                                                <span class="item-body-vendors__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Financial logistics
+                                            </li>
+                                            <li class="body-vendors__item item-body-vendors">
+                                                <span class="item-body-vendors__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Local presence on different markets
+                                            </li>
+                                            <li class="body-vendors__item item-body-vendors">
+                                                <span class="item-body-vendors__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                24/7 information, sales and technical support for resellers and
+                                                customers
+                                            </li>
+                                            <li class="body-vendors__item item-body-vendors">
+                                                <span class="item-body-vendors__icon">
+                                                    <svg>
+                                                        <use xlink:href="#check"></use>
+                                                    </svg>
+                                                </span>
+                                                Marketing representation of your brand
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="trust">
+                <div class="trust__container container-small">
+                    <div class="trust__image-block">
+                        <div class="trust__image ibg">
+                            <img src="img/trust-img.svg" alt="trust-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="contact" id="contact">
+                <div class="contact__container container-small">
+                    <div class="contact__body">
+                        <h3 class="contact__title">Let’s make business together!</h3>
+                        <div class="contact__subtitle text text-r">
+                            <p>
+                                Please fill in this form and we will contact you as soon as possible
+                            </p>
+                        </div>
+                        <form action="#" class="contact__form form-contact">
+                            <div class="form-contact__body">
+                                <div class="form-contact__item form-contact__item_small">
+                                    <div class="form-contact__label">First name</div>
+                                    <input placeholder="First name" autocomplete='off' type='text' name='form[]'
+                                        class='form-contact__input required'>
+                                    <div class="form-contact__error">Error message</div>
+                                </div>
+                                <div class="form-contact__item form-contact__item_small">
+                                    <div class="form-contact__label">Last name</div>
+                                    <input placeholder="Last name" autocomplete='off' type='text' name='form[]'
+                                        class='form-contact__input required'>
+                                    <div class="form-contact__error">Error message</div>
+                                </div>
+                                <div class="form-contact__item form-contact__item_small">
+                                    <div class="form-contact__label">Contact phone</div>
+                                    <input placeholder="Contact phone" autocomplete='off' type='tel' name='form[]'
+                                        class='form-contact__input required'>
+                                    <div class="form-contact__error">Error message</div>
+                                </div>
+                                <div class="form-contact__item form-contact__item_small">
+                                    <div class="form-contact__label">Contact email</div>
+                                    <input placeholder="Contact email" autocomplete='off' type='email' name='form[]'
+                                        class='form-contact__input required'>
+                                    <div class="form-contact__error">Error message</div>
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__label">Country</div>
+                                    <input placeholder="Country" autocomplete='off' type='text' name='form[]'
+                                        class='form-contact__input required'>
+                                    <div class="form-contact__error">Error message</div>
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__label">Company name</div>
+                                    <input placeholder="Company name" autocomplete='off' type='text' name='form[]'
+                                        class='form-contact__input required'>
+                                    <div class="form-contact__error">Error message</div>
+                                </div>
+                                <div class="form-contact__item form-contact__item_dropdown">
+                                    <div class="form-contact__label">Type of your business</div>
+                                    <div class="form-contact__dropdown dropdown">
+                                        <button class='dropdown__button' data-start="Select">Select</button>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__list-item" data-dropdown="Vendor">Vendor</li>
+                                            <li class="dropdown__list-item" data-dropdown="Reseller">Reseller</li>
+                                            <li class="dropdown__list-item" data-dropdown="Retail">Retail</li>
+                                            <li class="dropdown__list-item" data-dropdown="Telcos & ISPs">
+                                                Telcos & ISPs
+                                            </li>
+                                            <li class="dropdown__list-item" data-dropdown="Other">Other</li>
+                                        </ul>
+                                        <input type='text' name='form[]' value=''
+                                            class='dropdown__input-hidden required'>
+                                        <div class="form-contact__error">Error message</div>
+                                    </div>
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__label">Comments</div>
+                                    <textarea placeholder="Comments" autocomplete='off' name='form[]'
+                                        class='form-contact__input required'></textarea>
+                                    <div class="form-contact__error">Error message</div>
+                                </div>
+                                <button type='submit' class='form-contact__btn'>GET IN TOUCH</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+    <div class="footer__container container-small">
+        <div class="footer__row">
+            <div class="footer__column">
+                <a href="" class="footer__logo logo">
+                    <svg>
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__content content-footer">
+                    <div class="content-footer__column">
+                        <div class="content-footer__label">
+                            ADEON International, spol. s r. o.
+                        </div>
+                        <div class="content-footer__value">
+                            is registered in the Business Register of the City Court Bratislava III, Section Sro, File
+                            164547/B<br>
+                            29 Mierová Str., 821 05 Bratislava – borough Ružinov, Slovak Republic<br>
+                            Company ID: 54 974 631
+                            <span class="content-footer__link">+421 (0) 2/3333 1019</span>
+                            <span class="content-footer__link content-footer__link_email link-scroll"
+                                data-scroll="contact">
+                                іnfо@аdеоn.іntеrnаtіоnаl
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__column">
+                <nav class="footer__menu menu-footer">
+                    <ul class="menu-footer__list">
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link link-scroll" data-scroll="about">About us</a>
+                            </div>
+                        </li>
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link link-scroll" data-scroll="benefits">Key benefits</a>
+                            </div>
+                        </li>
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link link-scroll" data-scroll="vendors">Our vendors</a>
+                            </div>
+                        </li>
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link">Terms of use</a>
+                            </div>
+                        </li>
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link link-scroll" data-scroll="solutions">Solutions</a>
+                            </div>
+                        </li>
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link link-scroll" data-scroll="resellers">Our
+                                    resellers</a>
+                            </div>
+                        </li>
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link link-scroll" data-scroll="contact">Contact us</a>
+                            </div>
+                        </li>
+                        <li class="menu-footer__item">
+                            <div class="menu-footer__item-link">
+                                <a href="" class="menu-footer__link">Privacy policy</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <span class="footer__copyright-popup">
+                <p>
+                    No part of this publication may be reproduced, stored in a retrieval system, or transmitted inany
+                    form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the
+                    prior written permission of the publisher. For permission
+                    contact ADEON&nbsp;International,&nbsp;spol.&nbsp;s&nbsp;r.&nbsp;o
+                </p>
+            </span>
+            <span>
+                © 2024 ADEON International, spol. sr. o. - All rights reserved.<br>
+                All the names and brands used therein might be registered trademarks of their respective companies
+            </span>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
